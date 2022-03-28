@@ -8,13 +8,13 @@ echo "Creating non-root account"
 echo ""
 read -p "Enter New Username:" x
 adduser ${x}
-echo""
+echo ""
 
-echo"Downloading Qortal Core"
+echo "Downloading Qortal Core"
 su ${x} && cd /home/${x} && wget https://github.com/Qortal/qortal/releases/latest/download/qortal.zip && unzip qortal.zip && cd qortal
-echo""
+echo "
 
-echo"Starting Qortal Core"
+echo "Starting Qortal Core"
 chmod +x *.sh && ./start.sh
 
 
